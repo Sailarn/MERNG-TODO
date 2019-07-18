@@ -1,0 +1,23 @@
+{
+  "name": "server_side",
+  "version": "1.0.0",
+  "description": "server side of todo app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js",
+    "start": "node index.js"
+  },
+  "author": "denis9524@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server": "^2.7.0",
+    "bcryptjs": "^2.4.3",
+    "graphql": "^14.4.2",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.6.5"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  }
+}
