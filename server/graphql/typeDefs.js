@@ -33,7 +33,7 @@ module.exports = gql`
         register(registerInput: RegisterInput): User!
         login(username: String!, password: String!): User!
         createTodo(title: String!, description: String, priority: String, privateTodo: Boolean): Todo!
-        deleteTodo(todoId: ID!): Todo!
-        updateTodo(title: String, description: String, completed: String, privateTodo: Boolean, priority: String): Todo!
+        deleteTodo(todoId: ID!): ID!
+        updateTodo(todoId: ID! title: String, description: String, completed: Boolean, privateTodo: Boolean, priority: String): Todo!
     }
 `;

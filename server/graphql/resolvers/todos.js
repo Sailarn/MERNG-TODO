@@ -64,6 +64,36 @@ module.exports = {
             } catch (err) {
                 throw new Error(err);
             }
-        }
+        },
+        async updateTodo(_, {todoId, title, description, priority, privateTodo, completed, createdAt}, context) {
+            const user = checkAuth(context);
+
+            try {
+                const todo = await Todo.findById(todoId);
+                if (user.username === todo.username) {
+
+                    if (title.trim() === '') {
+                        throw new Error('Todo title must not be empty');
+                    }
+
+                    await todo.updateOne({
+                        title,
+                        description,
+                        completed: completed ? completed : false,
+                        priority: priority ? priority : 'low',
+                        privateTodo: privateTodo ? privateTodo : false,
+                        user: user.id,
+                        username: user.username,
+                        modifiedAt: new Date().toISOString()
+                    });
+                    await todo.save();
+                    return todo;
+                } else {
+                    throw new AuthenticationError('Action not allowed');
+                }
+            } catch (err) {
+                throw new Error(err);
+            }
+        },
     }
 };
