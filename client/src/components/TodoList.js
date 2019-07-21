@@ -7,6 +7,7 @@ import TodoItem from "./TodoItem";
 
 function TodoList() {
     const {loading, data: {getTodos: todos}} = useQuery(FETCH_TODOS_QUERY);
+    console.log(todos)
     return (
         <MDBCard className="my-5 px-5 pb-5">
             <MDBCardBody>

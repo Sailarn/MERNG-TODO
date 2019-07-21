@@ -95,5 +95,25 @@ module.exports = {
                 throw new Error(err);
             }
         },
+        async switchCompleteTodo(_, {todoId, completed, modifiedAt}, context) {
+            const user = checkAuth(context);
+
+            try {
+                const todo = await Todo.findById(todoId);
+                if (user.username === todo.username) {
+                    console.log(completed)
+                    await todo.updateOne({
+                        completed: completed,
+                        modifiedAt: new Date().toISOString()
+                    });
+                    await todo.save();
+                    return todo;
+                } else {
+                    throw new AuthenticationError('Action not allowed');
+                }
+            } catch (err) {
+                throw new Error(err);
+            }
+        },
     }
 };

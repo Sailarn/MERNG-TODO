@@ -35,5 +35,6 @@ module.exports = gql`
         createTodo(title: String!, description: String, priority: String, privateTodo: Boolean): Todo!
         deleteTodo(todoId: ID!): ID!
         updateTodo(todoId: ID! title: String, description: String, completed: Boolean, privateTodo: Boolean, priority: String): Todo!
+        switchCompleteTodo(todoId: ID! completed: Boolean!): Todo!
     }
 `;

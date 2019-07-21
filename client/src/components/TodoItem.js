@@ -1,7 +1,10 @@
 import React, {useContext} from 'react';
-import {MDBBtn, MDBCol, MDBRow, MDBCard, MDBView, MDBMask} from "mdbreact";
+import {MDBBtn, MDBCol, MDBRow, MDBView, MDBMask} from "mdbreact";
 import moment from 'moment';
+
 import {AuthContext} from "../context/auth";
+import OwnerOptions from "./OwnerOptions";
+
 
 function TodoItem({todo}) {
     const {user} = useContext(AuthContext);
@@ -13,13 +16,14 @@ function TodoItem({todo}) {
         modifiedAt,
         username,
         priority,
-        privateTodo
+        privateTodo,
+        id
     } = todo;
-    const todoItem = user ? (
+    const todoItem = (
         <MDBRow>
             <MDBCol lg="12" xl="12">
                 <MDBRow>
-                    <MDBCol lg="5" xl="4">
+                    <MDBCol lg="4" xl="4">
                         <MDBView hover className="rounded z-depth-1-half mb-lg-0 mb-4">
                             <img
                                 className="img-fluid"
@@ -31,7 +35,7 @@ function TodoItem({todo}) {
                             </a>
                         </MDBView>
                     </MDBCol>
-                    <MDBCol lg="7" xl="8">
+                    <MDBCol lg="6" xl="6">
                         <h3 className="font-weight-bold mb-3 p-0">
                             <strong>{title}</strong>
                         </h3>
@@ -41,36 +45,17 @@ function TodoItem({todo}) {
                         <p>
                             by <span style={{color: 'blue'}} className="font-weight-bold">{username}</span>, 19/04/2018
                         </p>
-                        {user.username === username ? (
-                            <MDBBtn color="primary" size="md">Read More</MDBBtn>): false}
+                        <p>Status: {completed ? <span style={{color: 'green'}}>Completed</span> :
+                            <span style={{color: 'red'}}>Incompleted</span>}</p>
                     </MDBCol>
+                    {user && user.username === username ? (<OwnerOptions options={todo}/>): false}
                 </MDBRow>
             </MDBCol>
         </MDBRow>
-    ) : false;
+    );
 
     return todoItem;
 
 }
 
 export default TodoItem;
-//
-// <MDBCardBody>
-//     <MDBCardHeader>
-//         <h3 className="font-weight-bold mb-3 p-0">
-//             <strong>{title}</strong>
-//         </h3>
-//     </MDBCardHeader>
-//     <MDBCardText>
-//         {description}
-//     </MDBCardText>
-//     <MDBCardFooter>
-//         <p>by <span className="font-weight-bold">{username}</span></p>
-//         <p>
-//             <strong>Created: {moment(createdAt).fromNow()}</strong> Modified: {moment(modifiedAt).fromNow()}
-//         </p>
-//         <div style={{color: completed ? 'green' : 'red'}}>
-//             {completed ? 'Completed' : 'Incompleted'}
-//         </div>
-//     </MDBCardFooter>
-// </MDBCardBody>
