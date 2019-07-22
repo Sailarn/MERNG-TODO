@@ -4,6 +4,7 @@ import {useQuery} from "@apollo/react-hooks";
 
 import {FETCH_TODOS_QUERY} from "../util/graphql";
 import TodoItem from "./TodoItem";
+import CreateTodoForm from "./CreateTodoForm";
 
 function TodoList() {
     const {loading, data: {getTodos: todos}} = useQuery(FETCH_TODOS_QUERY);
@@ -14,9 +15,7 @@ function TodoList() {
                 <h2 className="h1-responsive font-weight-bold text-center my-5">
                     Recent todos
                 </h2>
-                <p className="text-center w-responsive mx-auto mb-5">
-                    Sample text
-                </p>
+                <CreateTodoForm/>
                 {loading ? (
                     <h1>Loading todos...</h1>
                 ) : (<>

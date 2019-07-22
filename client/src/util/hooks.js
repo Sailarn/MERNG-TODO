@@ -14,9 +14,14 @@ export const useForm = (callback, initialState = {}) => {
         callback();
     };
 
+    const onSwitch = event => {
+        setValues({ ...values, [event.target.name]: event.target.checked });
+    };
+
     return {
         onChange,
         onSubmit,
+        onSwitch,
         values
     }
 };

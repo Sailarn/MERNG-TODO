@@ -12,7 +12,7 @@ function OwnerOptions({options: {completed, id}}) {
     };
     return (
         <MDBCol lg="2" xl="2">
-            <DeleteButton/>
+            <DeleteButton id={id}/>
             <EditButton/>
             <ToggleCompleteBtn options={toggleOptions}/>
         </MDBCol>

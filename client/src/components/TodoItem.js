@@ -43,7 +43,7 @@ function TodoItem({todo}) {
                             {description}
                         </p>
                         <p>
-                            by <span style={{color: 'blue'}} className="font-weight-bold">{username}</span>, 19/04/2018
+                            by <span style={{color: 'blue'}} className="font-weight-bold">{username}</span>, {moment(createdAt).fromNow(true)}
                         </p>
                         <p>Status: {completed ? <span style={{color: 'green'}}>Completed</span> :
                             <span style={{color: 'red'}}>Incompleted</span>}</p>
