@@ -1,8 +1,9 @@
 import React from 'react';
-import {MDBBtn} from 'mdbreact';
 import gql from "graphql-tag";
 import {useMutation} from "@apollo/react-hooks";
 import {FETCH_TODOS_QUERY} from "../util/graphql";
+import DeleteIcon from '@material-ui/icons/Delete';
+import IconButton from '@material-ui/core/IconButton';
 
 function DeleteButton({id, callback}) {
     const [deleteTodo] = useMutation(DELETE_TODO_MUTATION, {
@@ -17,7 +18,9 @@ function DeleteButton({id, callback}) {
         variables: {todoId: id}
     });
     return (
-        <MDBBtn size="sm" color="danger" onClick={deleteTodo}>Delete</MDBBtn>
+        <IconButton aria-label="Delete" onClick={deleteTodo}>
+            <DeleteIcon/>
+        </IconButton>
     )
 }
 

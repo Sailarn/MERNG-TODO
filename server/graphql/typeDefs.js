@@ -29,6 +29,9 @@ module.exports = gql`
         getTodos: [Todo],
         getTodo(todoId: ID!): Todo
     }
+    type Subscription {
+        todoComplete: Todo
+    }
     type Mutation{
         register(registerInput: RegisterInput): User!
         login(username: String!, password: String!): User!

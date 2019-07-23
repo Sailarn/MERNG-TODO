@@ -8,5 +8,8 @@ module.exports = {
     Mutation: {
         ...usersResolvers.Mutation,
         ...todosResolvers.Mutation
+    },
+    Subscription: {
+        ...todosResolvers.Subscription
     }
 };

@@ -101,12 +101,16 @@ module.exports = {
             try {
                 const todo = await Todo.findById(todoId);
                 if (user.username === todo.username) {
-                    console.log(completed)
                     await todo.updateOne({
                         completed: completed,
                         modifiedAt: new Date().toISOString()
                     });
                     await todo.save();
+
+                    context.pubsub.publish('TODO_CHANGE', {
+                        todoComplete: todo
+                    });
+
                     return todo;
                 } else {
                     throw new AuthenticationError('Action not allowed');
@@ -115,5 +119,10 @@ module.exports = {
                 throw new Error(err);
             }
         },
+    },
+    Subscription: {
+        todoComplete: {
+            subscribe: (_, __, { pubsub }) => pubsub.asyncIterator('TODO_CHANGE')
+        }
     }
 };

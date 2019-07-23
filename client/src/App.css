@@ -1,3 +1,9 @@
+a{
+  color: #FAFAFA
+}
+a:hover{
+  color: black;
+}
 .invalid-feedback{
   display: block !important;
 }
@@ -61,4 +67,32 @@
 }
 .switch-input:checked + .switch-label .toggle--off {
   display: none;
+}
+.create-todo-container{
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+.create-todo-first{
+  display: flex;
+  flex-direction: column;
+}
+.create-todo-second{
+  display: flex;
+  flex-direction: column;
+}
+.radio-group{
+  display: flex !important;
+  flex-direction: row !important;
+}
+.phone-menu{
+  display: none;
+}
+@media screen and (max-width: 400px){
+  .phone-menu{
+    display: block;
+  }
+  .normal-btns{
+    display: none;
+  }
 }
