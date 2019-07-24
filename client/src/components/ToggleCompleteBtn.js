@@ -4,7 +4,7 @@ import gql from 'graphql-tag';
 import Switch from "@material-ui/core/Switch";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 
-function ToggleCompleteBtn({options: {completed, id}}) {
+function ToggleCompleteBtn({options: {completed, id}, refetch}) {
     const [isCompleted, setSwitch] = useState(completed);
 
     function setComplete() {
@@ -13,7 +13,10 @@ function ToggleCompleteBtn({options: {completed, id}}) {
     }
 
     const [switchComplete] = useMutation(SWITCH_COMPLETE_MUTATION, {
-        variables: {todoId: id, completed: !isCompleted}
+        variables: {todoId: id, completed: !isCompleted},
+        update() {
+            refetch();
+        }
     });
 
     return (
@@ -25,6 +28,7 @@ function ToggleCompleteBtn({options: {completed, id}}) {
         />} label={isCompleted ? 'Completed' : "Incompleted"}/>
     );
 }
+
 const SWITCH_COMPLETE_MUTATION = gql`
     mutation switchCompleteTodo($todoId: ID!, $completed: Boolean!){
         switchCompleteTodo(todoId: $todoId, completed: $completed){

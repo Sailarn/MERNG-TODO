@@ -46,8 +46,7 @@ function NavBar() {
         if (item === 'logoutn') {
             handleItemClick(item);
             handleClose();
-        }
-        else{
+        } else {
             logout();
             handleClose();
         }
@@ -105,6 +104,11 @@ function NavBar() {
         </div>) : (
         <div>
             <div className="normal-btns">
+                <Typography
+                    variant="h6"
+                    style={{display: 'initial'}}>
+                    {user ? 'Welcome, ' + user.username : false}
+                </Typography>
                 <Button
                     onClick={logout}
                     color="inherit">Logout

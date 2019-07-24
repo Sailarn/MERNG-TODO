@@ -1,12 +1,12 @@
 import React from 'react';
 import TodoList from "../components/TodoList";
-import Container from '@material-ui/core/Container';
+import Grid from '@material-ui/core/Grid';
 
 function Home() {
     return (
-        <Container maxWidth="lg">
+        <Grid container item justify="center" alignItems="center" xs={12}>
             <TodoList/>
-        </Container>
+        </Grid>
     )
 }
 

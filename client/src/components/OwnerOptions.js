@@ -3,18 +3,19 @@ import Grid from '@material-ui/core/Grid';
 
 import DeleteButton from './DeleteButton';
 import ToggleCompleteBtn from './ToggleCompleteBtn';
-import EditButton from './EditButton';
+import EditTodoDialog from "./EditTodoDialog";
 
-function OwnerOptions({options: {completed, id}}) {
+function OwnerOptions({todo, refetch}) {
+    const {completed, id} = todo;
     const toggleOptions = {
       completed,
       id
     };
     return (
-        <Grid item xs={4}>
+        <Grid container item justify="flex-start" alignItems="center" xs={12}>
             <DeleteButton id={id}/>
-            <EditButton/>
-            <ToggleCompleteBtn options={toggleOptions}/>
+            <EditTodoDialog id={id} todo={todo} refetch={refetch}/>
+            <ToggleCompleteBtn options={toggleOptions} refetch={refetch}/>
         </Grid>
     )
 }

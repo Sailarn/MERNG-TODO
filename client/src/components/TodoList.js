@@ -1,33 +1,33 @@
 import React from 'react';
-import {MDBCard, MDBCardBody} from "mdbreact";
 import {useQuery} from "@apollo/react-hooks";
+import LinearProgress from '@material-ui/core/LinearProgress';
 
 import {FETCH_TODOS_QUERY} from "../util/graphql";
 import TodoItem from "./TodoItem";
-import CreateTodoForm from "./CreateTodoForm";
+import CreateTodo from "./CreateTodo";
+import Card from "@material-ui/core/Card";
 
 function TodoList() {
-    const {loading, data: {getTodos: todos}} = useQuery(FETCH_TODOS_QUERY);
+    const {loading, data: {getTodos: todos}, refetch} = useQuery(FETCH_TODOS_QUERY);
+
     return (
-        <MDBCard className="my-5 px-5 pb-5">
-            <MDBCardBody>
-                <h2 className="h1-responsive font-weight-bold text-center my-5">
-                    Recent todos
-                </h2>
-                <CreateTodoForm/>
-                {loading ? (
-                    <h1>Loading todos...</h1>
-                ) : (<>
-                        {todos && todos.map(todo => (
-                            <div key={todo.id}>
-                                <TodoItem todo={todo}/>
-                                <hr className="my-5"/>
-                            </div>
-                        ))}
-                    </>
-                )}
-            </MDBCardBody>
-        </MDBCard>
+        <Card style={{width: '100%', maxWidth: 1000, marginTop: 25}}>
+            <h2 className="h1-responsive font-weight-bold text-center my-5">
+                Recent todos
+            </h2>
+            <CreateTodo/>
+            {loading ? (
+                <LinearProgress/>
+            ) : (<>
+                    {todos && todos.map(todo => (
+                        <div key={todo.id}>
+                            <TodoItem todo={todo} refetch={refetch}/>
+                        </div>
+                    ))}
+                </>
+            )}
+            <hr className="my-5"/>
+        </Card>
     )
 }
 

@@ -38,7 +38,7 @@ module.exports = {
                 title,
                 description,
                 completed: completed ? completed : false,
-                priority: priority ? priority : 'low',
+                priority: priority ? priority : 'Low',
                 privateTodo: privateTodo ? privateTodo : false,
                 user: user.id,
                 username: user.username,
@@ -65,7 +65,7 @@ module.exports = {
                 throw new Error(err);
             }
         },
-        async updateTodo(_, {todoId, title, description, priority, privateTodo, completed, createdAt}, context) {
+        async updateTodo(_, {todoId, title, description, priority, privateTodo}, context) {
             const user = checkAuth(context);
 
             try {
@@ -79,13 +79,11 @@ module.exports = {
                     await todo.updateOne({
                         title,
                         description,
-                        completed: completed ? completed : false,
-                        priority: priority ? priority : 'low',
+                        priority: priority ? priority : 'Low',
                         privateTodo: privateTodo ? privateTodo : false,
-                        user: user.id,
-                        username: user.username,
                         modifiedAt: new Date().toISOString()
                     });
+                    console.log(priority, privateTodo)
                     await todo.save();
                     return todo;
                 } else {
