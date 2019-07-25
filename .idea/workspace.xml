@@ -1,32 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1b20f57e-0b4b-4a0d-b85a-ed896bed6d12" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/ApolloProvider.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/ApolloProvider.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/CreateTodo.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/CreateTodo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/CreateUpdateForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/CreateUpdateForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/DeleteButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/TodoOptions/DeleteButton.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/EditTodoDialog.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/TodoOptions/EditTodoDialog.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/NavBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/NavBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/OwnerOptions.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/OwnerOptions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/TodoItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/TodoItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/TodoList.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/TodoList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/ToggleCompleteBtn.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/TodoOptions/ToggleCompleteBtn.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/Register.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Register.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/client/yarn.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/graphql/resolvers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/graphql/resolvers/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/graphql/resolvers/todos.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/graphql/resolvers/todos.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/graphql/typeDefs.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/graphql/typeDefs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/util/check-auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/util/check-auth.js" afterDir="false" />
-    </list>
+    <list default="true" id="1b20f57e-0b4b-4a0d-b85a-ed896bed6d12" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +68,7 @@
       <workItem from="1563828135763" duration="6053000" />
       <workItem from="1563868442494" duration="33680000" />
       <workItem from="1563956042364" duration="21305000" />
-      <workItem from="1564040938589" duration="17020000" />
+      <workItem from="1564040938589" duration="17596000" />
     </task>
     <task id="LOCAL-00001" summary="- done for now with server queries and mutations&#10;- start developing client side">
       <created>1563549292990</created>
@@ -137,7 +112,14 @@
       <option name="project" value="LOCAL" />
       <updated>1564005121700</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="- finished application methods&#10;- material-ui framework now main component framework. delete mdbreact&#10;- reorganized imports in components &#10;- deleted unnecessary variables">
+      <created>1564064465565</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1564064465565</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -157,12 +139,15 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="- done for now with server queries and mutations&#10;- start developing client side" />
     <MESSAGE value="- created Login and Register page&#10;- started developing Todo list" />
     <MESSAGE value="- created some crud components (Complete/Incomplete button, Delete button and Edit) but for now functional only first in the list&#10;- on server side added new mutation" />
     <MESSAGE value="- added functionality to Delete Button and created todo post form. And i'm thinking to change ui framework from mdbreact to just material-ui..." />
     <MESSAGE value="- started reworking application" />
     <MESSAGE value="- solved problem with updating cache after mutation but it needed to think about it again. Is was too ease. Created form for both updating and creating todo and also for updating method was created dialog form." />
-    <option name="LAST_COMMIT_MESSAGE" value="- solved problem with updating cache after mutation but it needed to think about it again. Is was too ease. Created form for both updating and creating todo and also for updating method was created dialog form." />
+    <MESSAGE value="- finished application methods&#10;- material-ui framework now main component framework. delete mdbreact&#10;- reorganized imports in components &#10;- deleted unnecessary variables" />
+    <option name="LAST_COMMIT_MESSAGE" value="- finished application methods&#10;- material-ui framework now main component framework. delete mdbreact&#10;- reorganized imports in components &#10;- deleted unnecessary variables" />
   </component>
 </project>
