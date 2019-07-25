@@ -1,9 +1,10 @@
 import React from 'react';
 import gql from "graphql-tag";
 import {useMutation} from "@apollo/react-hooks";
-import {FETCH_TODOS_QUERY} from "../util/graphql";
 import DeleteIcon from '@material-ui/icons/Delete';
 import IconButton from '@material-ui/core/IconButton';
+
+import {FETCH_TODOS_QUERY} from "../../util/graphql";
 
 function DeleteButton({id, callback}) {
     const [deleteTodo] = useMutation(DELETE_TODO_MUTATION, {

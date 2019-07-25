@@ -4,7 +4,8 @@ import DialogContent from '@material-ui/core/DialogContent';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import Icon from "@material-ui/core/Icon";
 import IconButton from "@material-ui/core/IconButton";
-import CreateUpdateForm from "./CreateUpdateForm";
+
+import CreateUpdateForm from "../CreateUpdateForm";
 
 export default function EditTodoDialog({id, todo: {title, description, privateTodo, priority}, refetch}) {
     const [open, setOpen] = useState(false);

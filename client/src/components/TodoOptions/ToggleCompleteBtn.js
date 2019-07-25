@@ -9,7 +9,7 @@ function ToggleCompleteBtn({options: {completed, id}, refetch}) {
 
     function setComplete() {
         isCompleted ? setSwitch(false) : setSwitch(true);
-        switchComplete();
+        return switchComplete();
     }
 
     const [switchComplete] = useMutation(SWITCH_COMPLETE_MUTATION, {

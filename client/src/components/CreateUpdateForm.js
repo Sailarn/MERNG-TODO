@@ -1,4 +1,4 @@
-import React, {useContext} from 'react';
+import React from 'react';
 import Input from "@material-ui/core/Input";
 import TextField from "@material-ui/core/TextField";
 import FormControl from "@material-ui/core/FormControl";
@@ -8,14 +8,16 @@ import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Radio from "@material-ui/core/Radio";
 import Switch from "@material-ui/core/Switch";
 import Button from "@material-ui/core/Button";
-import {useForm} from "../util/hooks";
 import {useMutation} from "@apollo/react-hooks";
-import {FETCH_TODOS_QUERY} from "../util/graphql";
 import gql from "graphql-tag";
+import Typography from "@material-ui/core/Typography";
+
+import {useForm} from "../util/hooks";
+import {FETCH_TODOS_QUERY} from "../util/graphql";
 
 export default function CreateUpdateForm({query, name, initialState, close, refetch}) {
     const {values, onChange, onSubmit, onSwitch} = useForm(queryTodoCallback, initialState);
-    const [queryTodo, {error}] = useMutation(query === 'CREATE' ? CREATE_TODO : UPDATE_TODO, {
+    const [queryTodo] = useMutation(query === 'CREATE' ? CREATE_TODO : UPDATE_TODO, {
         variables: values,
         update(proxy, result) {
             const data = proxy.readQuery({
@@ -36,16 +38,18 @@ export default function CreateUpdateForm({query, name, initialState, close, refe
     });
 
     function queryTodoCallback() {
-        queryTodo();
-        if(close){
+        if (close) {
             close();
         }
+        return queryTodo();
     }
 
     return (
         <form onSubmit={onSubmit} className='create-todo-container'>
             <div className="create-todo-first">
-                {name ? <h3>Create Todo</h3> : false}
+                {name ? <Typography variant="h5" component="h2">
+                    Create Todo
+                </Typography> : false}
                 <Input
                     placeholder="Title"
                     name="title"

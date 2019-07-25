@@ -1,23 +1,39 @@
 import React from 'react';
 import {useQuery} from "@apollo/react-hooks";
 import LinearProgress from '@material-ui/core/LinearProgress';
+import Card from "@material-ui/core/Card";
+import CardHeader from '@material-ui/core/CardHeader';
+import Typography from '@material-ui/core/Typography';
 
 import {FETCH_TODOS_QUERY} from "../util/graphql";
 import TodoItem from "./TodoItem";
 import CreateTodo from "./CreateTodo";
-import Card from "@material-ui/core/Card";
 
 function TodoList() {
-    const {loading, data: {getTodos: todos}, refetch} = useQuery(FETCH_TODOS_QUERY);
-
+    const {loading, data, refetch, error} = useQuery(FETCH_TODOS_QUERY);
+    let todos;
+    if (!error) {
+        todos = data.getTodos;
+    }
     return (
-        <Card style={{width: '100%', maxWidth: 1000, marginTop: 25}}>
-            <h2 className="h1-responsive font-weight-bold text-center my-5">
-                Recent todos
-            </h2>
+        <Card style={{width: '100%', maxWidth: 1000, margin: 20}}>
             <CreateTodo/>
-            {loading ? (
-                <LinearProgress/>
+            <CardHeader
+                title="Recent todos"
+                style={{textAlign: 'center'}}
+                className="title-todos"
+            />
+            {loading || error ? (
+                <>
+                    <LinearProgress/>
+                    {error ? <Typography
+                        variant="h4"
+                        component="h2"
+                        style={{textAlign: 'center'}}
+                    >
+                        {error.message}
+                    </Typography> : false}
+                </>
             ) : (<>
                     {todos && todos.map(todo => (
                         <div key={todo.id}>
@@ -26,7 +42,6 @@ function TodoList() {
                     ))}
                 </>
             )}
-            <hr className="my-5"/>
         </Card>
     )
 }

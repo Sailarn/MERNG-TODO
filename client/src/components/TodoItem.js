@@ -1,15 +1,14 @@
 import React, {useContext} from 'react';
 import moment from 'moment';
-
-import {AuthContext} from "../context/auth";
-import OwnerOptions from "./OwnerOptions";
-
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import CardActions from '@material-ui/core/CardActions';
 import Typography from '@material-ui/core/Typography';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import Container from '@material-ui/core/Container';
+
+import {AuthContext} from "../context/auth";
+import OwnerOptions from "./OwnerOptions";
 
 /**
  * @return {boolean}
@@ -24,12 +23,11 @@ function TodoItem({todo, refetch}) {
         modifiedAt,
         username,
         priority,
-        privateTodo,
-        // id
+        privateTodo
     } = todo;
-    return (!privateTodo || user && privateTodo && username === user.username) ? (
+    return (!privateTodo || (user && privateTodo && username === user.username)) ? (
         <Container maxWidth="md">
-            <Card>
+            <Card style={{margin: '25px 0'}}>
                 <CardActionArea>
                     <CardContent>
                         <Typography variant="h4" component="h2">
@@ -41,7 +39,10 @@ function TodoItem({todo, refetch}) {
                         <Typography variant="subtitle1" gutterBottom color="textSecondary" component="p">
                             {moment(createdAt).fromNow()}
                         </Typography>
-                        {modifiedAt !== createdAt ? <p>Modified at: {moment(modifiedAt).fromNow()}</p> : false}
+                        {modifiedAt !== createdAt ?
+                            <Typography variant="subtitle1" gutterBottom color="textSecondary" component="p">
+                                Modified at: {moment(modifiedAt).fromNow()}
+                            </Typography> : false}
                         <Typography variant="subtitle1" color="textSecondary" component="p">
                             {description ? ' Description: ' + description : 'No description'}
                         </Typography>
@@ -63,7 +64,6 @@ function TodoItem({todo, refetch}) {
                     </CardActions>
                 ) : false}
             </Card>
-            <hr className="my-5"/>
         </Container>) : false;
 
 }

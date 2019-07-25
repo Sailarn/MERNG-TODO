@@ -1,6 +1,7 @@
 import React from 'react';
-import TodoList from "../components/TodoList";
 import Grid from '@material-ui/core/Grid';
+
+import TodoList from "../components/TodoList";
 
 function Home() {
     return (

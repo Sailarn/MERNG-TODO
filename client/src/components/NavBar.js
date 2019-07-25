@@ -43,7 +43,7 @@ function NavBar() {
     }
 
     function phoneMenuClick(item) {
-        if (item === 'logoutn') {
+        if (item === 'logout') {
             handleItemClick(item);
             handleClose();
         } else {
@@ -104,11 +104,6 @@ function NavBar() {
         </div>) : (
         <div>
             <div className="normal-btns">
-                <Typography
-                    variant="h6"
-                    style={{display: 'initial'}}>
-                    {user ? 'Welcome, ' + user.username : false}
-                </Typography>
                 <Button
                     onClick={logout}
                     color="inherit">Logout
@@ -125,7 +120,7 @@ function NavBar() {
                         component={Link} to="/"
                         variant="h6"
                         className={classes.title}>
-                        MERNQ Todo App
+                        MERNG Todo App
                     </Typography>
                     {children}
                 </Toolbar>

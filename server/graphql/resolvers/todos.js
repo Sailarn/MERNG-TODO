@@ -1,4 +1,4 @@
-const {AuthenticationError, UserInputError} = require('apollo-server');
+const {AuthenticationError} = require('apollo-server');
 
 const Todo = require('../../models/Todo');
 const checkAuth = require('../../util/check-auth');
@@ -7,8 +7,7 @@ module.exports = {
     Query: {
         async getTodos() {
             try {
-                const todos = await Todo.find().sort({createdAt: -1});
-                return todos;
+                return await Todo.find().sort({createdAt: -1});
             } catch (err) {
                 throw new Error(err);
             }
@@ -46,9 +45,7 @@ module.exports = {
                 modifiedAt: new Date().toISOString()
             });
 
-            const todo = await newTodo.save();
-
-            return todo;
+            return await newTodo.save();
         },
         async deleteTodo(_, {todoId}, context) {
             const user = checkAuth(context);
@@ -83,9 +80,7 @@ module.exports = {
                         privateTodo: privateTodo ? privateTodo : false,
                         modifiedAt: new Date().toISOString()
                     });
-                    console.log(priority, privateTodo)
-                    await todo.save();
-                    return todo;
+                    return await todo.save();
                 } else {
                     throw new AuthenticationError('Action not allowed');
                 }
@@ -103,13 +98,7 @@ module.exports = {
                         completed: completed,
                         modifiedAt: new Date().toISOString()
                     });
-                    await todo.save();
-
-                    context.pubsub.publish('TODO_CHANGE', {
-                        todoComplete: todo
-                    });
-
-                    return todo;
+                    return await todo.save();
                 } else {
                     throw new AuthenticationError('Action not allowed');
                 }
@@ -117,10 +106,5 @@ module.exports = {
                 throw new Error(err);
             }
         },
-    },
-    Subscription: {
-        todoComplete: {
-            subscribe: (_, __, { pubsub }) => pubsub.asyncIterator('TODO_CHANGE')
-        }
     }
 };

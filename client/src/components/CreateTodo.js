@@ -1,6 +1,7 @@
 import React, {useContext} from 'react';
-import {AuthContext} from "../context/auth";
 import Paper from '@material-ui/core/Paper';
+
+import {AuthContext} from "../context/auth";
 import CreateUpdateForm from "./CreateUpdateForm";
 
 /**
