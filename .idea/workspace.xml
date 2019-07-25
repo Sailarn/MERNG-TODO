@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1b20f57e-0b4b-4a0d-b85a-ed896bed6d12" name="Default Changelist" comment="" />
+    <list default="true" id="1b20f57e-0b4b-4a0d-b85a-ed896bed6d12" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/build/index.html" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +71,7 @@
       <workItem from="1563828135763" duration="6053000" />
       <workItem from="1563868442494" duration="33680000" />
       <workItem from="1563956042364" duration="21305000" />
-      <workItem from="1564040938589" duration="17596000" />
+      <workItem from="1564040938589" duration="18194000" />
     </task>
     <task id="LOCAL-00001" summary="- done for now with server queries and mutations&#10;- start developing client side">
       <created>1563549292990</created>
@@ -119,7 +122,14 @@
       <option name="project" value="LOCAL" />
       <updated>1564064465565</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="- application build">
+      <created>1564064693218</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1564064693219</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -148,6 +158,7 @@
     <MESSAGE value="- started reworking application" />
     <MESSAGE value="- solved problem with updating cache after mutation but it needed to think about it again. Is was too ease. Created form for both updating and creating todo and also for updating method was created dialog form." />
     <MESSAGE value="- finished application methods&#10;- material-ui framework now main component framework. delete mdbreact&#10;- reorganized imports in components &#10;- deleted unnecessary variables" />
-    <option name="LAST_COMMIT_MESSAGE" value="- finished application methods&#10;- material-ui framework now main component framework. delete mdbreact&#10;- reorganized imports in components &#10;- deleted unnecessary variables" />
+    <MESSAGE value="- application build" />
+    <option name="LAST_COMMIT_MESSAGE" value="- application build" />
   </component>
 </project>
