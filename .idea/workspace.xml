@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1b20f57e-0b4b-4a0d-b85a-ed896bed6d12" name="Default Changelist" comment="" />
+    <list default="true" id="1b20f57e-0b4b-4a0d-b85a-ed896bed6d12" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/ApolloProvider.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/ApolloProvider.js" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +71,7 @@
       <workItem from="1563828135763" duration="6053000" />
       <workItem from="1563868442494" duration="33680000" />
       <workItem from="1563956042364" duration="21305000" />
-      <workItem from="1564040938589" duration="18465000" />
+      <workItem from="1564040938589" duration="19778000" />
     </task>
     <task id="LOCAL-00001" summary="- done for now with server queries and mutations&#10;- start developing client side">
       <created>1563549292990</created>
