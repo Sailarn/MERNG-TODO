@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter, Route} from "react-router-dom";
+import {BrowserRouter, Route, Redirect} from "react-router-dom";
 
 import './App.css';
 
@@ -20,6 +20,7 @@ function App() {
                 <Route exact path="/" component={Home}/>
                 <AuthRoute exact path="/login" component={Login}/>
                 <AuthRoute exact path="/register" component={Register}/>
+                <Redirect to="/"/>
             </BrowserRouter>
         </AuthProvider>
     );

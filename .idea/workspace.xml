@@ -3,7 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="1b20f57e-0b4b-4a0d-b85a-ed896bed6d12" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/ApolloProvider.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/ApolloProvider.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/build/asset-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/build/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/precache-manifest.8528d8d9337f365b14ddef5506aba901.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/service-worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/build/service-worker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/static/js/main.5ef3d273.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/static/js/main.5ef3d273.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,7 +33,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="/Webstorm" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -71,7 +77,8 @@
       <workItem from="1563828135763" duration="6053000" />
       <workItem from="1563868442494" duration="33680000" />
       <workItem from="1563956042364" duration="21305000" />
-      <workItem from="1564040938589" duration="19778000" />
+      <workItem from="1564040938589" duration="20150000" />
+      <workItem from="1564151722582" duration="760000" />
     </task>
     <task id="LOCAL-00001" summary="- done for now with server queries and mutations&#10;- start developing client side">
       <created>1563549292990</created>
@@ -129,7 +136,14 @@
       <option name="project" value="LOCAL" />
       <updated>1564064693219</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="- application build v.2 (server now on heroku + changed path to build folder)">
+      <created>1564067425734</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1564067425734</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -159,6 +173,7 @@
     <MESSAGE value="- solved problem with updating cache after mutation but it needed to think about it again. Is was too ease. Created form for both updating and creating todo and also for updating method was created dialog form." />
     <MESSAGE value="- finished application methods&#10;- material-ui framework now main component framework. delete mdbreact&#10;- reorganized imports in components &#10;- deleted unnecessary variables" />
     <MESSAGE value="- application build" />
-    <option name="LAST_COMMIT_MESSAGE" value="- application build" />
+    <MESSAGE value="- application build v.2 (server now on heroku + changed path to build folder)" />
+    <option name="LAST_COMMIT_MESSAGE" value="- application build v.2 (server now on heroku + changed path to build folder)" />
   </component>
 </project>
