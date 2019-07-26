@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1b20f57e-0b4b-4a0d-b85a-ed896bed6d12" name="Default Changelist" comment="- added Redirect to solve problem with main page when hostin on Github">
+    <list default="true" id="1b20f57e-0b4b-4a0d-b85a-ed896bed6d12" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/build/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/build/asset-manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/build/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/build/precache-manifest.ec39f98a66cc627dca8bd3e0d8b1a613.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/precache-manifest.5b34fcfddfad1415efdaaa4e5939f35f.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/client/build/service-worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/build/service-worker.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/build/static/js/main.bed956a2.chunk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/build/static/js/main.bed956a2.chunk.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/Register.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Register.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/static/js/main.ba642468.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/static/js/main.ba642468.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/TodoItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/TodoItem.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -78,7 +78,7 @@
       <workItem from="1563868442494" duration="33680000" />
       <workItem from="1563956042364" duration="21305000" />
       <workItem from="1564040938589" duration="20150000" />
-      <workItem from="1564151722582" duration="1466000" />
+      <workItem from="1564151722582" duration="2826000" />
     </task>
     <task id="LOCAL-00001" summary="- done for now with server queries and mutations&#10;- start developing client side">
       <created>1563549292990</created>
@@ -150,7 +150,14 @@
       <option name="project" value="LOCAL" />
       <updated>1564152735445</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="- fixed error snackbars">
+      <created>1564153384004</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1564153384004</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -182,6 +189,7 @@
     <MESSAGE value="- application build" />
     <MESSAGE value="- application build v.2 (server now on heroku + changed path to build folder)" />
     <MESSAGE value="- added Redirect to solve problem with main page when hostin on Github" />
-    <option name="LAST_COMMIT_MESSAGE" value="- added Redirect to solve problem with main page when hostin on Github" />
+    <MESSAGE value="- fixed error snackbars" />
+    <option name="LAST_COMMIT_MESSAGE" value="- fixed error snackbars" />
   </component>
 </project>

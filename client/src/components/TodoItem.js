@@ -41,17 +41,18 @@ function TodoItem({todo, refetch}) {
                         </Typography>
                         {modifiedAt !== createdAt ?
                             <Typography variant="subtitle1" gutterBottom color="textSecondary" component="p">
-                                Modified at: {moment(modifiedAt).fromNow()}
+                                Modified at: {moment(modifiedAt).fromNow(true)}
                             </Typography> : false}
                         <Typography variant="subtitle1" color="textSecondary" component="p">
                             {description ? ' Description: ' + description : 'No description'}
                         </Typography>
-                        <Typography>
+                        <Typography display="inline">
                             Status: {completed ? <span style={{color: 'green'}}>Completed</span> :
                             <span style={{color: 'red'}}>Incompleted</span>}
                         </Typography>
-                        <Typography>
+                        <Typography style={{display: 'flex'}}>
                             Priority: <span style={{
+                            marginLeft: '5px',
                             color: priority === 'Low' ? 'green'
                                 : priority === 'Medium' ? 'orange' : 'red'
                         }}>{priority}</span>
