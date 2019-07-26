@@ -35,9 +35,10 @@ function Register(props) {
             props.history.push('/');
         },
         onError(err) {
-            if (!err.message) {
+            if (err.graphQLErrors[0]) {
                 setErrors(err.graphQLErrors[0].extensions.exception.errors);
-            } else {
+            }
+            else{
                 setConnectionError(err.message);
                 setOpen(true);
             }
