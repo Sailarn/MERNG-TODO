@@ -2,6 +2,11 @@
 
 ## Overview
 Todo application developed with React.js and Apollo GraphQL. Divided on client and server side.
+This project using the following technologies:
+* React.js (React hooks) on front-end side
+* Material-ui for components styling
+* Node.js (Apollo-GraphQL) on back-end side
+* MongoDB as database
 
 ## Features
 * Login/Register account
